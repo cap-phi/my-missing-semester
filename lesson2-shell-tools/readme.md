@@ -81,3 +81,6 @@ Sol:
 5. (Advanced) Write a command or script to recursively find the most recently modified file in a directory. More generally, can you list all files by recency?
 Sol: 
 - Ref: https://stackoverflow.com/questions/1015678/get-most-recent-file-in-a-directory-on-linux. Not sure how to show and sort timestamps correctly on Mac OS as -printf does not work outside linux. 
+
+## More to read
+- Bash scripting tutorials: https://ryanstutorials.net/bash-scripting-tutorial/
