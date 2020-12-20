@@ -36,8 +36,8 @@ echo "curl --head --silent https://missing.csail.mit.edu"
 [Shebang/Hashbang](https://en.wikipedia.org/wiki/Shebang_(Unix)): "When a text file with a shebang is used as if it is an executable in a Unix-like operating system, the program loader mechanism parses the rest of the file's initial line as an interpreter directive."
 
 10. Use | and > to write the “last modified” date output by semester into a file called last-modified.txt in your home directory.
-    - `read -r semester | tee last-modified.txt`
-    - `read -r semester > last-modified-2.txt`
+    - `date -r semester | tee last-modified.txt`
+    - `date -r semester > last-modified-2.txt`
 
 ## MORE TO READ
 1. Single quote and double quote: https://www.gnu.org/software/bash/manual/html_node/Quoting.html 
