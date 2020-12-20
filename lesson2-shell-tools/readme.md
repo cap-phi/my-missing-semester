@@ -14,11 +14,11 @@ A sample output would look like this
  -rw-r--r--   1 user group 106M Jan 13 12:12 foo
  drwx------+ 47 user group 1.5K Jan 12 18:08 ..
  ```
-Sol: 
+### Sol: 
 - `ls -alhtG`
 
 2. Write bash functions marco and polo that do the following. Whenever you execute marco the current working directory should be saved in some manner, then when you execute polo, no matter what directory you are in, polo should cd you back to the directory where you executed marco. For ease of debugging you can write the code in a file marco.sh and (re)load the definitions to your shell by executing source marco.sh.
-Sol: 
+### Sol: 
 - marco.sh
 ```
 function marco(){
@@ -36,7 +36,7 @@ function polo(){
 }
 ```
 
-3. Say you have a command that fails rarely. In order to debug it you need to capture its output but it can be time consuming to get a failure run. Write a bash script that runs the following script until it fails and captures its standard output and error streams to files and prints everything at the end. Bonus points if you can also report how many runs it took for the script to fail.
+1. Say you have a command that fails rarely. In order to debug it you need to capture its output but it can be time consuming to get a failure run. Write a bash script that runs the following script until it fails and captures its standard output and error streams to files and prints everything at the end. Bonus points if you can also report how many runs it took for the script to fail.
 ```
  #!/usr/bin/env bash
 
@@ -50,7 +50,7 @@ function polo(){
 
  echo "Everything went according to plan"
  ```
-Sol: 
+### Sol: 
 ```
 #!/usr/bin/env bash
 
@@ -74,12 +74,13 @@ cat log
 Your task is to write a command that recursively finds all HTML files in the folder and makes a zip with them. Note that your command should work even if the files have spaces (hint: check -d flag for xargs).
 
 If you’re on macOS, note that the default BSD find is different from the one included in GNU coreutils. You can use -print0 on find and the -0 flag on xargs. As a macOS user, you should be aware that command-line utilities shipped with macOS may differ from the GNU counterparts; you can install the GNU versions if you like by using brew.
-Sol: 
+
+### Sol: 
     1. first generate some temp html files: `mkdir foo bar`, then `touch {foo,bar}/{a..h}\ space.html`
     2. second, find all files with extension .html and pass those to xargs: `find . -name '*.html' -print0 | xargs -0 tar cf target.tar`
 
 5. (Advanced) Write a command or script to recursively find the most recently modified file in a directory. More generally, can you list all files by recency?
-Sol: 
+### Sol: 
 - Ref: https://stackoverflow.com/questions/1015678/get-most-recent-file-in-a-directory-on-linux. Not sure how to show and sort timestamps correctly on Mac OS as -printf does not work outside linux. 
 
 ## More to read
